@@ -4,7 +4,9 @@
   "description": "",
   "main": "app/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "pm2 start app/app.js",
+    "setup": "node app/setup.js"
   },
   "repository": {
     "type": "git",
