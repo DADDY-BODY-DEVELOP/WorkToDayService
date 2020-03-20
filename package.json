@@ -1,0 +1,26 @@
+{
+  "name": "worktodayservice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/10M011y01U001n01c101l00e100S11/WorkToDayService.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/10M011y01U001n01c101l00e100S11/WorkToDayService/issues"
+  },
+  "homepage": "https://github.com/10M011y01U001n01c101l00e100S11/WorkToDayService#readme",
+  "dependencies": {
+    "firebase": "^7.11.0",
+    "macaddress": "^0.2.9",
+    "moment": "^2.24.0",
+    "node-cron": "^2.0.3",
+    "node-fetch": "^2.6.0"
+  }
+}
