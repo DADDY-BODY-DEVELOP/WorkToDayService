@@ -15,23 +15,44 @@ var app = firebase.initializeApp({
     measurementId: "G-ZGTDDBZWCQ"
 });
 
-cron.schedule('* * * * *', function () {
+cron.schedule('0 6 * * *', function () {
 
-macaddress.one(function (err, mac) {
-    fetch('https://api.ipify.org/?format=json')
-        .then(res => res.json())
-        .then(json => {
-            let newKey = 0;
-            let updates = {};
-            const list = {
-                "_key": newKey,
-                "ip": json.ip,
-                "mac": mac,
-                "datetime": moment().format(),
-            }
-            updates[`/tb_ip/` + newKey] = list;
-            return app.database().ref().update(updates)
-        });
-    console.log("Mac address for this host: %s", mac);
+    macaddress.one(function (err, mac) {
+        fetch('https://api.ipify.org/?format=json')
+            .then(res => res.json())
+            .then(json => {
+                let newKey = 0;
+                let updates = {};
+                const list = {
+                    "_key": newKey,
+                    "ip": json.ip,
+                    "mac": mac,
+                    "datetime": moment().format(),
+                }
+                updates[`/tb_ip/` + newKey] = list;
+                return app.database().ref().update(updates)
+            });
+        // console.log("Mac address for this host: %s", mac);
+    });
 });
+
+cron.schedule('0 18 * * *', function () {
+
+    macaddress.one(function (err, mac) {
+        fetch('https://api.ipify.org/?format=json')
+            .then(res => res.json())
+            .then(json => {
+                let newKey = 0;
+                let updates = {};
+                const list = {
+                    "_key": newKey,
+                    "ip": json.ip,
+                    "mac": mac,
+                    "datetime": moment().format(),
+                }
+                updates[`/tb_ip/` + newKey] = list;
+                return app.database().ref().update(updates)
+            });
+        // console.log("Mac address for this host: %s", mac);
+    });
 });
