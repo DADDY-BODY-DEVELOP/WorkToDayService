@@ -34,3 +34,20 @@ macaddress.one(function (err, mac) {
     console.log("Mac address for this host: %s", mac);
 });
 // ---------------------------- สำหรับติดตั้งครั้งแรก ----------------------------
+
+var urlencoded = new URLSearchParams();
+urlencoded.append("message", "test");
+
+
+fetch("https://notify-api.line.me/api/notify", {
+    method: 'POST',
+    headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Authorization": "Bearer hEksyzJc18YqjvsetgCjBGbR5Mg5cUrBp2tAb7HalE7"
+    },
+    body: "message=test",
+    redirect: 'follow'
+  })
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));

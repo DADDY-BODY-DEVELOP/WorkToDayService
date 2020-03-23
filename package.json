@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "pm2 start app/app.js",
-    "setup": "node app/setup.js"
+    "setup": "node app/setup.js",
+    "app": "node app/app.js"
   },
   "repository": {
     "type": "git",
