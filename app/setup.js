@@ -35,19 +35,19 @@ macaddress.one(function (err, mac) {
 });
 // ---------------------------- สำหรับติดตั้งครั้งแรก ----------------------------
 
-var urlencoded = new URLSearchParams();
-urlencoded.append("message", "test");
+// var urlencoded = new URLSearchParams();
+// urlencoded.append("message", "test");
 
 
-fetch("https://notify-api.line.me/api/notify", {
-    method: 'POST',
-    headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-        "Authorization": "Bearer hEksyzJc18YqjvsetgCjBGbR5Mg5cUrBp2tAb7HalE7"
-    },
-    body: "message=test",
-    redirect: 'follow'
-  })
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
+// fetch("https://notify-api.line.me/api/notify", {
+//     method: 'POST',
+//     headers: {
+//         "Content-Type": "application/x-www-form-urlencoded",
+//         "Authorization": "Bearer hEksyzJc18YqjvsetgCjBGbR5Mg5cUrBp2tAb7HalE7"
+//     },
+//     body: "message=test",
+//     redirect: 'follow'
+//   })
+//   .then(response => response.text())
+//   .then(result => console.log(result))
+//   .catch(error => console.log('error', error));
